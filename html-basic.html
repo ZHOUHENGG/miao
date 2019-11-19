@@ -5,18 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 
 <body>
 
-    <header class="header">
+    <header>
         <hgroup>
-            <h1>lorem</h1>
-            <h2>Lorem ipsum</h2>
-            <h3>Lorem ipsum dolor</h3>
+            <img src="../miao/img/史莱姆.jpg" alt="史莱姆">
+            <div class="title">
+                <h1>lorem</h1>
+                <h2>Lorem ipsum</h2>
+                <h3>Lorem ipsum dolor</h3>
+            </div>
         </hgroup>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id maxime
@@ -29,7 +35,7 @@
             ipsa alias labore nostrum sint ex non repellendus, doloremque et.
         </p>
 
-        <nav class="nav">
+        <nav>
             <ul>
                 <li><a href="https://www.jd.com">在新窗口打开京东</a></li>
                 <li><a href="mailto:xieranmaya@qq.com">点击给我发邮件</a></li>
@@ -41,7 +47,6 @@
             </ul>
         </nav>
 
-        <img class="img1" src="..\miao/img/葡萄.jpg" alt="葡萄" />
     </header>
 
     <hr />
@@ -51,8 +56,8 @@
         <div class="toolbar">
             <input type="text" id="text" placeholder="请输入弹幕内容" />
             <br>
-            <button class="btn" id="send">发射</button>
-            <button class="btn" id="clear">清除</button>
+            <button class="btn btn-primary" id="send">发射</button>
+            <button class="btn btn-danger" id="clear">清除</button>
         </div>
     </section>
 
@@ -188,6 +193,72 @@
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                 </dd>
             </form>
+        </article>
+
+        <hr>
+
+        <article>
+            <div class="container">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="table-1">
+                                <!--表格行-->
+                                <th colspan="12">
+                                    <!--单元格课横夸列数-->
+                                    <h4>货品列表</h4>
+                                </th>
+                            </tr>
+                            <tr class="table-2 thead-dark">
+                                <th colspan="3">编号</th>
+                                <!--表格头-->
+                                <th colspan="3">品名</th>
+                                <th colspan="3">进价</th>
+                                <th colspan="3">出价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-2">
+                                <td colspan="3">001</td>
+                                <!--表格单元-->
+                                <td colspan="3">
+                                    葡萄
+                                    <img src="../miao/img/葡萄.jpg" alt="葡萄">
+                                </td>
+                                <td colspan="3">5元</td>
+                                <td colspan="3">8元</td>
+                            </tr>
+                            <tr class="table-2">
+                                <td colspan="3">002</td>
+                                <td colspan="3">
+                                    苹果
+                                    <img src="../miao\img\苹果.jpg" alt="苹果">
+                                </td>
+                                <td colspan="3">5元</td>
+                                <td colspan="3">8元</td>
+                            </tr>
+                            <tr class="table-2">
+                                <td colspan="3">003</td>
+                                <td colspan="3">
+                                    香蕉
+                                    <img src="../miao\img\香蕉.jpg" alt="香蕉">
+                                </td>
+                                <td colspan="3">5元</td>
+                                <td colspan="3">8元</td>
+                            </tr>
+                            <tr class="table-2">
+                                <td colspan="3">004</td>
+                                <td colspan="3">
+                                    橙子
+                                    <img src="../miao\img\橙子.jpg" alt="橙子">
+                                </td>
+                                <td colspan="3">5元</td>
+                                <td colspan="3">8元</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </article>
     </section>
     <script type="text/javascript" src="index.js"></script>
