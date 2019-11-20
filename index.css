@@ -7,10 +7,16 @@ hgroup {
     flex-direction: row;*/
     margin: 20px 0;
 }
-.title {
-    margin-left: 20px;
-	margin-top: 30px;
+nav ul {
+    padding: 0;
 }
+nav ul li {
+    display: inline;
+}
+nav ul li a:hover {
+    background: red;
+}
+
 
 section {
     margin: 0 10px;
