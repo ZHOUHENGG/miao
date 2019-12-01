@@ -13,7 +13,7 @@ body {
 
 main {
     position: absolute;
-    margin: 5em 5em 10em 5em;
+    margin: 20em 5em;
     padding: 1em 1em 0 1em;
     border: 2px solid purple;
     box-shadow: 0 10px 20px rgba(24, 4, 141, 0.5);
@@ -71,9 +71,10 @@ h2 {
 main h2 {
     margin: 0 -16px;
     box-shadow: -2px 0px greenyellow, 2px 0px greenyellow;
-    background-color: #8fd32866;
+    background-color: #85d11466;
+    border: solid greenyellow;
+    border-width: 1px 0;
 }
-
 
 ul {
     padding: 1em;
