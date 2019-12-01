@@ -7,93 +7,105 @@
   <style>
     /* YOUR STYLE GOES HERE */
     /* 不得改变页面的任何html结构 */
-    body > p:first-child {
+    body>p:first-child {
       color: red;
     }
+
     .a.c {
       color: red;
     }
-    .a.c > span span:first-child {
+
+    .a.c>span span:first-child {
       color: green;
     }
-    .a.c > span span:last-child {
+
+    .a.c>span span:last-child {
       color: blue;
     }
 
     p.a:hover {
-    color: red;
+      color: red;
     }
+
     p.a:focus {
-    color: blue;
+      color: blue;
     }
+
     p.a:active {
       color: green;
     }
 
-    div > a {
+    div>a {
       color: pink;
     }
-    div > a:visited {
+
+    div>a:visited {
       color: orange;
     }
 
     [href$=".com"] {
       color: blue;
     }
+
     [href^="aaa"] {
       font-size: 30px;
     }
+
     [href^="tel"] {
       color: yellow;
     }
 
-    .a > ul li:nth-child(1n+4) {
+    .a>ul li:nth-child(1n+4) {
       color: red;
     }
-    .a > ul li:nth-child(1n+8) {
+
+    .a>ul li:nth-child(1n+8) {
       color: black;
     }
-    .a > ul li:nth-last-child(4),.a > ul li:nth-last-child(5) {
+
+    .a>ul li:nth-last-child(4),
+    .a>ul li:nth-last-child(5) {
       color: red;
     }
 
 
-    .b > ul li:nth-child(1n) {
+    .b>ul li:nth-child(1n) {
       color: red;
     }
-    .b > ul li:nth-child(1n+26) {
+
+    .b>ul li:nth-child(1n+26) {
       color: black;
     }
-    .b > ul li:nth-child(1n+35) {
+
+    .b>ul li:nth-child(1n+35) {
       color: blue;
     }
-    .b > ul li:nth-child(1n+51) {
+
+    .b>ul li:nth-child(1n+51) {
       color: black;
     }
-    .b > ul li:nth-child(1n+65) {
+
+    .b>ul li:nth-child(1n+65) {
       color: green;
     }
 
-    .prime > ul li {
+    .prime>ul li {
       color: blue;
     }
-    .prime > ul li:nth-of-type(2n+4),.prime > ul li:nth-of-type(3n+6),.prime > ul li:nth-of-type(5n+10) {
+
+    .prime>ul li:nth-of-type(2n+4),
+    .prime>ul li:nth-of-type(3n+9),
+    .prime>ul li:nth-of-type(5n+25),
+    .prime>ul li:nth-of-type(7n+49) {
       color: red;
     }
-    .prime > ul li:nth-child(49) {
-      color: red;
-    }
-    .prime > ul li:nth-child(77) {
-      color: red;
-    }
-    .prime > ul li:nth-child(91) {
-      color: red;
-    }
-    .prime > ul li:nth-child(1) {
+
+    .prime>ul li:nth-child(1) {
       color: black;
-      </style>
     }
-      </head>
+  </style>
+
+</head>
 
 <body>
   <p>红色</p>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: yellow;
+        }
+
+        .b1 {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            background: yellow;
+            width: 500px;
+            height: 500px;
+            background: black;
+        }
+        p {
+            display: inline-block;
+            width: 300px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="b1">
+        <p>
+            方案5：table-cell多行文字垂直居中
+        </p>
+        <p>
+            子元素display为inline-block
+        </p>
+        <p>
+            需要知道父元素的宽高，且宽高不能设为百分比
+        </p>
+    </div>
+</body>
+
+</html>
