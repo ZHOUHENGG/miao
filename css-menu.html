@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css-menu.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+
+    /*header*/
+    .navbar {
+        background: #3983e5;
+        color: white;
+        padding: 0 1rem;
+        margin-top: 20px;
+    }
+
+    a,
+    .dropdown-item {
+        color: white;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    li:hover {
+        background: #0A56BB;
+        cursor: pointer;
+    }
+
+
+    .dropdown-menu {
+        margin: 0;
+        background: #0A56BB;
+        border-radius: 0;
+        box-shadow: 0 0 0 1px black;
+    }
+
+    .nav-item .dropdown-menu a:hover {
+        background: white;
+        display: block;
+    }
+
+    .navbar-nav .dropdown-menu a {
+        position: relative;
+    }
+
+    nav ul li {
+        position: relative;
+    }
+
+    ul ul li {
+        position: relative;
+    }
+
+    ul ul ul {
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 100%;
+    }
+
+    ul ul li:hover ul {
+        display: block;
+    }
+
+    li[data-tip]:hover::before {
+        background-color: red;
+    }
+
+    li[data-tip]::before {
+        xcolor: red;
+        content: attr(data-tip);
+        position: absolute;
+        z-index: 10;
+        background-color: #FF8E00;
+        font-size: 8px;
+        left: 40px;
+        bottom: 30px;
+        white-space: pre;
+        padding: 2px;
+    }
+
+    li[data-tip]::after {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        xbackground-color: #FF8E00;
+        border: 2px solid #FF8E00;
+        border-color: #FF8E00 transparent transparent #FF8E00;
+        left: 42px;
+        bottom: 26px;
+    }
+</style>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-sm">
+            <span class="navbar-brand">去哪里</span>
+
+            <ul class="navbar-nav">
+                <!--第一层ul-->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        首页
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown" data-tip="低价促">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">酒店</a>
+                    <!--第一层下拉-->
+                    <ul class="dropdown-menu dropright">
+                        <!--第二层ul-->
+                        <li class="dropdown-item dropdown-toggle" href="#">
+                            国内酒店
+                            <ul class="dropdown-menu dropright">
+                                <!--第三层ul-->
+                                <li class="dropdown-item dropdown-toggle" href="#">
+                                    国内酒店
+                                </li>
+
+                                <li class="dropdown-item dropdown-toggle" href="#">
+                                    国外酒店
+                                </li>
+
+                                <li class="dropdown-item dropdown-toggle" href="#">
+                                    民俗客栈
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-item dropdown-toggle" href="#">
+                            国外酒店
+                            <ul class="dropdown-menu dropright">
+                                <!--第三层ul-->
+                                <li class="dropdown-item dropdown-toggle" href="#">
+                                    国内酒店
+                                </li>
+
+                                <li class="dropdown-item dropdown-toggle" href="#">
+                                    国外酒店
+                                </li>
+
+                                <li class="dropdown-item dropdown-toggle" href="#">
+                                    民俗客栈
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-item dropdown-toggle" href="#">
+                            民俗客栈
+                            <ul class="dropdown-menu dropright">
+                                <!--第三层ul-->
+                                <li class="dropdown-item dropdown-toggle" href="#">
+                                    国内酒店
+                                </li>
+
+                                <li class="dropdown-item dropdown-toggle" href="#">
+                                    国外酒店
+                                </li>
+
+                                <li class="dropdown-item dropdown-toggle" href="#">
+                                    民俗客栈
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown" data-tip="新升级">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">旅游</a>
+                    <div class="dropdown-menu dropright">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 1</a>
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 2</a>
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 3</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">机票</a>
+                    <div class="dropdown-menu dropright">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 1</a>
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 2</a>
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 3</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">火车</a>
+                    <div class="dropdown-menu dropright">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 1</a>
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 2</a>
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 3</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">门票</a>
+                    <div class="dropdown-menu dropright">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 1</a>
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 2</a>
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 3</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">更多</a>
+                    <div class="dropdown-menu dropright">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 1</a>
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 2</a>
+                        <a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropright">Link 3</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+</body>
+
+</html>
