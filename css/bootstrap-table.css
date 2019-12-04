@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+}
+section {
+    margin: 2rem;
+    box-shadow: 0 0 10px 0 #dee2e6;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    /*为表格设置合并边框模型*/
+}
+.table thead tr {
+    border-top: 1px solid #dee2e6;
+    border-bottom: 2px solid #dee2e6;
+}
+.table tbody tr {
+    border-top: 1px solid #dee2e6;
+}
+.table th {
+    text-align: left;
+}
+.table td {
+    display: table-cell;
+}
+.table td,.table th {
+    padding: .75rem;
+}
+
+
+.table-dark {
+    background: #343a40;
+    color: white;
+}
+.table-dark thead tr {
+    border-bottom: 2px solid #454d55;
+}
+.table-dark tbody tr {
+    border-top: 1px solid #454d55;
+}
+
+
+.table .thead-dark {
+    background: #343a40;
+    color: white;
+    border: 1px solid #454d55;
+}
+.table .thead-light {
+    background: #e9ecef;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
+
+.table.table.table-striped tbody tr:nth-of-type(odd) {
+    background: #F2F2F2;
+}
+/*连起来写表示找到同时拥有这几个类名的元素*/
+.table.table-striped.table-dark tbody tr:nth-of-type(odd) {
+    background: #3E444A;
+}
+
+
+.table.table-bordered th,
+.table.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.table.table-bordered.table-dark th,
+.table.table-bordered.table-dark td {
+    border: 1px solid #454d55;;
+}
+
+.table.table-borderless thead tr,
+.table.table-borderless tbody tr {
+    border-bottom: 0px;
+    border-top: 0px;
+}
+
+.table.table-hover tbody tr:hover {
+    background: #ECECEC;
+}
+.table.table-hover.table-dark tbody tr:hover {
+    background: #43494E;
+}
+
+.table.table-sm td,
+.table.table-sm th,
+.table.table-sm.table-dark td,
+.table.table-sm.table-dark th {
+    padding: .3rem;
+}
