@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 310px;
+            height: 310px;
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+            background: blue;
+            padding: 5px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .grid {
+            font-size: 4rem;
+            text-align: center;
+            color: black;
+            background: white;
+        }
+
+        .grid:hover {
+            box-shadow: 0 0 0 5px red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="grid">1</div>
+        <div class="grid">2</div>
+        <div class="grid">3</div>
+        <div class="grid">4</div>
+        <div class="grid">5</div>
+        <div class="grid">6</div>
+        <div class="grid">7</div>
+        <div class="grid">8</div>
+        <div class="grid">9</div>
+    </div>
+
+    <script>
+        var b = document.getElementsByClassName("grid");
+        for (var i = 0; i < b.length; i++) {
+            b[i].onmouseover = function (e) {
+                var color = "#" + ("00000" + ((Math.random() * 16777215 + 0.5) >> 0).toString(16)).slice(-6);
+                this.style['color'] = color;
+            }
+        }
+    </script>
+</body>
+
+</html>
