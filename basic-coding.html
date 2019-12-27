@@ -81,7 +81,8 @@
     var a = +prompt("请输入一个整数");
     var b = +prompt("请输入一个整数");
     var c = a%b;
-    console.log(Number(c.toFixed(4)))
+    c = Number(c.toFixed(4));
+    console.log(c)
 </script>
 <script type="x" id="ch0103/12">
     var r = +prompt("请输入不超过100的非负实数");
@@ -93,9 +94,8 @@
     var b = a + "";
     var c = b.split("");
     var d = c.reverse();
-    var e = d.join();
-    var f = e.Number();
-    console.log(f)
+    var e = d.join("");
+    console.log(e)
 </script>
 <script type="x" id="ch0103/14">
     var h = +prompt("请输入一个整数");
@@ -116,7 +116,7 @@
     var Xb = prompt("请输入一个数");
     var Yb = prompt("请输入一个数");
     var c = Math.sqrt((Xb-Xa)*(Xb-Xa)+(Yb-Ya)*(Yb-Ya));
-    console.log(parseInt(c.toFixed(3)))
+    console.log(c.toFixed(3))
 </script>
 <script type="x" id="ch0103/17"></script>
 <script type="x" id="ch0103/18">
