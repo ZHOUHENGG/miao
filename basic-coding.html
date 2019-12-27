@@ -57,7 +57,8 @@
     var c = prompt("请输入一个实数");
     var d = prompt("请输入一个实数");
     var fx = a*Math.pow(x,3)+b*Math.pow(x,2)+c*x+d;
-    console.log(Number(fx.toFixed(7)))
+    fx = Number(fx.toFixed(7));
+    console.log(fx)
 </script>
 <script type="x" id="ch0103/08">
     var f = +prompt("请输入一个实数");
@@ -67,8 +68,8 @@
 <script type="x" id="ch0103/09">
     var r = +prompt("请输入一个大于0的实数");
     var dia = 2*r;
-    var per = 2*Math.PI;
-    var are = Math.PI*r*r;
+    var per = 2*3.14159;
+    var are = 3.14159*r*r;
     console.log(dia.toFixed(4) +" "+ per.toFixed(4) +" "+ are.toFixed(4))
 </script>
 <script type="x" id="ch0103/10">
@@ -86,8 +87,9 @@
 </script>
 <script type="x" id="ch0103/12">
     var r = +prompt("请输入不超过100的非负实数");
-    var V = 4/3*Math.PI*Math.pow(r,3);
-    console.log(Number(V.toFixed(2)))
+    var v = 4/3*Math.PI*Math.pow(r,3);
+    v = Number(v.toFixed(2));
+    console.log(v)
 </script>
 <script type="x" id="ch0103/13">
     var a = +prompt("请输入一个三位数");
@@ -101,7 +103,7 @@
     var h = +prompt("请输入一个整数");
     var r = +prompt("请输入一个整数");
     var s = Math.PI*r*r*h/1000;
-    console.log(Math.floor(20/s))
+    console.log(Math.ceil(20/s))
 </script>
 <script type="x" id="ch0103/15">
     var n = +prompt("请输入一个整数");
