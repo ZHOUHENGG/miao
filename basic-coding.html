@@ -1,0 +1,139 @@
+<script type="x" id="ch0103/01">
+    var nub1 = prompt("请输入一个整数");
+    var a = Math.trunc(nub1);
+    var nub2 = prompt("请输入一个整数");
+    var b = Math.trunc(nub2);
+    console.log(a + b)
+</script>
+<script type="x" id="ch0103/02">
+    var nub1 = prompt("请输入一个整数");
+    var a = Math.trunc(nub1);
+    var nub2 = prompt("请输入一个整数");
+    var b = Math.trunc(nub2);
+    var nub3 = prompt("请输入一个整数");
+    var c = Math.trunc(nub3);
+    var d = (a+b)*c;
+    console.log(d)
+</script>
+<script type="x" id="ch0103/03">
+    var nub1 = prompt("请输入一个整数");
+    var a = Math.trunc(nub1);
+    var nub2 = prompt("请输入一个整数");
+    var b = Math.trunc(nub2);
+    var nub3 = prompt("请输入一个不为0的整数");
+    var c = Math.trunc(nub3);
+    var d = (a+b)/c;
+    console.log(d)
+</script>
+<script type="x" id="ch0103/04">
+    var nub1 = prompt("请输入一个整数");
+    var a = Math.trunc(nub1);
+    var nub2 = prompt("请输入一个不为0的整数");
+    var b = Math.trunc(nub2);
+    var c = Math.trunc(a/b);
+    var d = a % b;
+    console.log(c +" "+ d)
+</script>
+<script type="x" id="ch0103/05">
+    var nub1 = prompt("请输入一个整数");
+    var a = Math.trunc(nub1);
+    var nub2 = prompt("请输入一个不为0的整数");
+    var b = Math.trunc(nub2);
+    var c = a/b;
+    console.log(parseFloat(c.toFixed(9)))
+</script>
+<script type="x" id="ch0103/06">
+    var nub1 = prompt("请输入一个整数");
+    var a = Math.trunc(nub1);
+    var nub2 = prompt("请输入一个整数");
+    var b = Math.trunc(nub2);
+    var c = (b/c)*100;
+    console.log(parseFloat(c.toFixed(3))+"%")
+</script>
+<script type="x" id="ch0103/07">
+    var a = prompt("请输入一个实数");
+    var b = prompt("请输入一个实数");
+    var c = prompt("请输入一个实数");
+    var d = prompt("请输入一个实数");
+    var x = prompt("请输入一个实数");
+    var fx = a*Math.pow(x,3)+b*Math.pow(x,2)+c*x+d;
+    console.log(parseFloat(fx.toFixed(7)))
+</script>
+<script type="x" id="ch0103/08">
+    var f = +prompt("请输入一个实数");
+    var c = 5*(f-32)/9;
+    console.log(parseFloat(c.toFixed(5)))
+</script>
+<script type="x" id="ch0103/09">
+    var r = +prompt("请输入一个大于0的实数");
+    var dia = 2*r;
+    var per = 2*Math.PI;
+    var are = Math.PI*r*r;
+    console.log(parseFloat(dia.toFixed(4)) +" "+ parseFloat(per.toFixed(4)) +" "+ parseFloat(are.toFixed(4)))
+</script>
+<script type="x" id="ch0103/10">
+    var r1 = +prompt("请输入一个整数");
+    var r2 = +prompt("请输入一个整数");
+    var R = 1/(1/r1 + 1/r2);
+    console.log(parseFloat(R.toFixed(2)))
+</script>
+<script type="x" id="ch0103/11">
+    var a = +prompt("请输入一个整数");
+    var b = +prompt("请输入一个整数");
+    var c = a%b;
+    console.logo(parseInt(c.toFixed(4)))
+</script>
+<script type="x" id="ch0103/12">
+    var r = +prompt("请输入不超过100的非负实数");
+    var V = 4/3*Math.PI*Math.pow(r,3);
+    console.log(parseFloat(V.toFixed(2)))
+</script>
+<script type="x" id="ch0103/13">
+    var a = +prompt("请输入一个三位数");
+    var b = a + "";
+    var c = b.split("");
+    var d = c.reverse();
+    var e = d.join();
+    var f = e.parseInt();
+    console.log(f)
+</script>
+<script type="x" id="ch0103/14">
+    var h = +prompt("请输入一个整数");
+    var r = +prompt("请输入一个整数");
+    var s = Math.PI*r*r*h/1000;
+    console.log(Math.trunc(20/s))
+</script>
+<script type="x" id="ch0103/15">
+    var n = +prompt("请输入一个整数");
+    var x = +prompt("请输入一个整数");
+    var y = +prompt("请输入一个整数");
+    var a = Math.ceil(y/x);
+    console.log(n-a)
+</script>
+<script type="x" id="ch0103/16">
+    var Xa = prompt("请输入一个数");
+    var Ya = prompt("请输入一个数");
+    var Xb = prompt("请输入一个数");
+    var Yb = prompt("请输入一个数");
+    var c = Math.sqrt((Xb-Xa)*(Xb-Xa)+(Yb-Ya)*(Yb=Ya));
+    console.log(parseInt(c.toFixed(3)))
+</script>
+<script type="x" id="ch0103/17"></script>
+<script type="x" id="ch0103/18"></script>
+<script type="x" id="ch0103/19">
+    var nub1 = +prompt("请输入一个整数");
+    var a = Math.trunc(nub1);
+    var a1 = Math.abs(a);
+    var nub2 = +prompt("请输入一个整数");
+    var b= Math.trunc(nub2);
+    var b1 = Math.abs(b);
+    console.log(a1*b1);
+</script>
+<script type="x" id="ch0103/20">
+    var nub = +prompt("请输入一个整数");
+    var n = Math.trunc(nub);
+    if(0 <= n < 31) {
+        var s = Math.pow(2,n)
+    }
+    console.log(s)
+</script>

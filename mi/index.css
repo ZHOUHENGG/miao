@@ -107,7 +107,6 @@ header {
     display: block;
 }
 
-
 /*右边顶部链接标题*/
 .right-nav {
     position: absolute;
@@ -212,7 +211,6 @@ header {
     0% {
         opacity: 1;
     }
-
 }
 
 /*顶部右边购物车下拉框*/
@@ -899,71 +897,45 @@ body main {
 }
 
 /*小米闪购轮播效果*/
-#s-btn1:checked~.sg-row .sale-slide .sale-slide-box {
-    transform: translateX(-992px);
-    transition: .8s;
-}
-#s-btn1:checked~.b1 {
+#s-btn1:checked~.b1,
+#s-btn2:checked~.b2,
+#s-btn3:checked~.b1, .b2,
+#s-btn4:checked~.b1, .b3,
+#s-btn5:checked~.b1, .b2, .b3,
+#s-btn6:checked~.b1, .b2, .b4 {
     display: none;
 }
-#s-btn1:checked~.b2 {
+#s-btn1:checked~.b2,
+#s-btn2:checked~.b1,
+#s-btn3:checked~.b3,
+#s-btn4:checked~.b2,
+#s-btn5:checked~.b4,
+#s-btn6:checked~.b3 {
     display: block;
+}
+
+#s-btn1:checked~.sg-row .sale-slide .sale-slide-box,
+#s-btn4:checked~.sg-row .sale-slide .sale-slide-box {
+    transform: translateX(-992px);
+    transition: .8s;
 }
 
 #s-btn2:checked~.sg-row .sale-slide .sale-slide-box {
     transform: translateX(0px);
     transition: .8s;
 }
-#s-btn2:checked~.b2 {
-    display: none;
-}
-#s-btn2:checked~.b1 {
-    display: block;
-}
 
-#s-btn3:checked~.sg-row .sale-slide .sale-slide-box {
+#s-btn3:checked~.sg-row .sale-slide .sale-slide-box,
+#s-btn6:checked~.sg-row .sale-slide .sale-slide-box {
     transform: translateX(-1984px);
     transition: .8s;
-}
-#s-btn3:checked~.b1, .b2 {
-    display: none;
-}
-#s-btn3:checked~.b3 {
-    display: block;
-}
-
-#s-btn4:checked~.sg-row .sale-slide .sale-slide-box {
-    transform: translateX(-992px);
-    transition: .8s;
-}
-#s-btn4:checked~.b1, .b3 {
-    display: none;
-}
-#s-btn4:checked~.b2 {
-    display: block;
 }
 
 #s-btn5:checked~.sg-row .sale-slide .sale-slide-box {
     transform: translateX(-2976px);
     transition: .8s;
 }
-#s-btn5:checked~.b1, .b2, .b3 {
-    display: none;
-}
-#s-btn5:checked~.b4 {
-    display: block;
-}
 
-#s-btn6:checked~.sg-row .sale-slide .sale-slide-box {
-    transform: translateX(-1984px);
-    transition: .8s;
-}
-#s-btn6:checked~.b1, .b2, .b4 {
-    display: none;
-}
-#s-btn6:checked~.b3 {
-    display: block;
-}
 
 /*小米闪购轮播块*/
 .sg-row .sale-slide {
@@ -1124,37 +1096,31 @@ body main {
 /*小米其他专区板块*/
 /*more*/
 /*list-item*/
-.more-qt label {
+.more .mr,
+.more .mr2 {
     cursor: pointer;
-}
-.more-qt a:hover {
-    color: #ff6700;
-}
-.more-qt span {
     border-bottom: 2px solid transparent;
-    transition: .1s;
+    transition-property: color, border;
+    transition-duration: 9999s;
 }
-
-/*其他专区标题切换*/
-.more-qt {
-    transition: 9999s;
-}
-
-#rm1:checked~.more .mr,
 #rm1:hover~.more .mr,
 #rm2:hover~.more .mr2 {
     color: #ff6700;
     border-color: #ff6700;
-    transition: .1s;
+    transition: none;
 }
-
 #rm1:hover~.more .mr2,
 #rm2:hover~.more .mr {
-    color: #424242;
-    border-color: transparent;
-    transition: .1s;
+    animation: bbb 999999s infinite steps(99999, start);
+    transition: none;
 }
 
+@keyframes bbb {
+    0% {
+    color: #424242;
+    border-color: transparent;
+    }
+}
 /*其他专区板块切换*/
 .qt-list1 .qt-block.b1 {
     visibility: visible;
