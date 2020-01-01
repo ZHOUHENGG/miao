@@ -370,11 +370,11 @@
     var b = Math.trunc(nub2);
     var nub3 = prompt("请输入一个整数");
     var c = Math.trunc(nub3);
-    if (a + b > c && a + c > b && b + c > a) {
-        console.log('YES');
+    if (a+b>c && a+c>b && b+c>a) {
+        console.log('yes');
     }
     else {
-        console.log("NO");
+        console.log("no");
     }
 </script>
 <script type="x" id="ch0104/17">
@@ -391,10 +391,10 @@
     var a = Math.trunc(nub1);
     var nub2 = prompt("请输入一个整数");
     var b = Math.trunc(nub2);
-    if ((-1<=a && a<=1) && (-1<=b && b<=1)) {
-        console.log("YES");
+    if ((a>=-1 && a<=1) && (b>=-1 && b<=1)) {
+        console.log("yes");
     }else {
-        console.log("NO");
+        console.log("no");
     }
 </script>
 <script type="x" id="ch0104/19">
@@ -425,7 +425,23 @@
     }
 </script>
 <script type="x" id="ch0104/20">
-
+    var a = Number(prompt())
+    var b = Number(prompt())
+    var c = Number(prompt())
+    var x1, x2
+    var delta = b ** 2 - 4 * a * c
+    if (delta >= 0) {
+      x1 = -b / (2 * a)
+        console.log(`x1=x2=${x1.toFixed(5)}`)
+    } else if (delta > 0) {
+      x1 = (-b + Math.sqrt(delta)) / (2 * a)
+      x2 = (-b - Math.sqrt(delta)) / (2 * a)
+        console.log(`x1=${x1.toFixed(5)};x2=${x2.toFixed(5)}`)
+    } else {
+        x1 = `${(-b / 2 / a).toFixed(5)}+${(Math.sqrt(-delta) / 2 / a).toFixed(5)}i`
+        x2 = `${(-b / 2 / a).toFixed(5)}-${(Math.sqrt(-delta) / 2 / a).toFixed(5)}i`
+        console.log(`x1=${x1};x2=${x2}`)
+    }
 </script>
 <script type="x" id="ch0104/21">
     var nub1 = prompt("请输入一个整数");
