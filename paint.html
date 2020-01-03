@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+  ctx.fillRect(340,125,50,50);//实心矩形
+  ctx.strokeRect(10,125,50,50);//空心矩形
+  var g = ctx.createLinearGradient(0,100,100,100);
+  g.addColorStop(0,"blue");
+  g.addColorStop(0.1,"red");
+  g.addColorStop(0.3,"yellow");
+  g.addColorStop(0.5,"purple");
+  g.addColorStop(0.7,"aqua");
+  g.addColorStop(0.9,"orange");
+  g.addColorStop(1,"green");
+  ctx.fillStyle = g;
+  ctx.fillRect(0,0,100,100);
+
+
+  ctx.moveTo(0,0); //对角线
+  ctx.lineTo(400,300);
+  ctx.stroke();
+  ctx.moveTo(400,0); //对角线
+  ctx.lineTo(0,300);
+  ctx.stroke();
+
+  ctx.beginPath();//圆形
+  ctx.arc(200,150,100,0,2*Math.PI,false);
+  ctx.moveTo(294,150);
+  ctx.arc(200,150,80,0,2*Math.PI,true);
+  ctx.lineWidth = 2;
+  ctx.fillStyle = "red";
+  ctx.fill()
+  ctx.moveTo(200,150);
+  ctx.lineTo(200,70);
+  ctx.moveTo(200,150);
+  ctx.lineTo(120,150);
+  ctx.moveTo(200,150);
+  ctx.lineTo(280,150);
+  ctx.moveTo(200,150);
+  ctx.lineTo(200,230);
+  ctx.stroke();
+
+  ctx.beginPath(); //虚线
+  ctx.lineTo(0,280);
+  ctx.lineTo(400,280);
+  ctx.stroke();
+
+  ctx.beginPath(); //虚线
+  ctx.setLineDash([2,2]); //删掉就是实线
+  ctx.lineTo(0,20);
+  ctx.lineTo(400,20);
+  ctx.stroke();
+</script>
+</html>
